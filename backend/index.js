@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname,'../script')));
 app.use(express.static(path.join(__dirname,'../views')));
 
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 })
 
@@ -19,5 +19,5 @@ app.post('/data', (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log('server is running on port 3000');
+    console.log('server is running on port localhost:3000');
 })
